@@ -218,12 +218,12 @@ public class Verify5Client {
 		timer.purge();
 	}
 
-	public void init() {
+	public void init(int delay,int interval) {
 		timer.schedule(new TimerTask() {
 			@Override
 			public void run() {
 				refreshToken();
 			}
-		}, 10*1000, 60 * 60 * 1000);
+		}, delay, interval);
 	}
 }
