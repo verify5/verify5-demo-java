@@ -53,7 +53,7 @@ public class Verify5Client {
 		params.put("token", token);
 		params.put("verifyid", verifyId);		
 		params.put("timestamp", ""+System.currentTimeMillis());
-		// 以下是自定义参数，添加自定义参数后方便在提供的风险告警和数据分析
+		// 以下是自定义参数，添加自定义参数后在风险告警和数据分析中可以关联到业务数据
 		param.put("userId":"testuser");
 		param.put("orderId":"OD22ce32d");	
 		// 签名
