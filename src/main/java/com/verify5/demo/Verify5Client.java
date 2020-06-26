@@ -51,8 +51,12 @@ public class Verify5Client {
 			params.putAll(extra);
 		}
 		params.put("token", token);
-		params.put("verifyid", verifyId);
+		params.put("verifyid", verifyId);		
 		params.put("timestamp", ""+System.currentTimeMillis());
+		// 以下是自定义参数，添加自定义参数后方便在提供的风险告警和数据分析
+		param.put("userId":"testuser");
+		param.put("orderId":"OD22ce32d");	
+		// 签名
 		String sign=calcSignature(appkey, params);
 		params.put("signature", sign);
 		try {
